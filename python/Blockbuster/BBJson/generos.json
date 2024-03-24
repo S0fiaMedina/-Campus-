@@ -1,0 +1,42 @@
+{
+    "G01": {
+        "Id": "G01",
+        "Nombre": "Drama"
+    },
+    "G02": {
+        "Id": "G02",
+        "Nombre": "Comedia"
+    },
+    "G03": {
+        "Id": "G03",
+        "Nombre": "Misterio"
+    },
+    "G04": {
+        "Id": "G04",
+        "Nombre": "Romance"
+    },
+    "G05": {
+        "Id": "G05",
+        "Nombre": "Ciencia ficcion"
+    },
+    "G06": {
+        "Id": "G06",
+        "Nombre": "Accion"
+    },
+    "G07": {
+        "Id": "G07",
+        "Nombre": "Horror"
+    },
+    "G08": {
+        "Id": "G08",
+        "Nombre": "Crimen"
+    },
+    "G09": {
+        "Id": "G09",
+        "Nombre": "Thriller"
+    },
+    "G010": {
+        "Id": "G010",
+        "Nombre": "Aventura"
+    }
+}

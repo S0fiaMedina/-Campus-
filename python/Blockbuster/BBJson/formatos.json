@@ -1,0 +1,22 @@
+{
+    "F01": {
+        "Id": "F01",
+        "Nombre": "Dvd-rip"
+    },
+    "F02": {
+        "Id": "F02",
+        "Nombre": "Bluray"
+    },
+    "F03": {
+        "Id": "F03",
+        "Nombre": "Cam"
+    },
+    "F04": {
+        "Id": "F04",
+        "Nombre": "Vhsrip"
+    },
+    "F05": {
+        "Id": "F05",
+        "Nombre": "Qwer"
+    }
+}
