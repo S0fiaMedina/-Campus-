@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('variables.css');
+
+*{
+    /* outline: 1px solid green;   */
+    font-family: 'Poppins', sans-serif;
+}
+img{
+    border-radius: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html{
+    background-color: var(--bgColor);
+}
+main{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+}
+nav{
+    background-color: var(--navColor);
+}
+.info__producto div{
+ background-color: var(--infoColor);
+}
+.sidebar__option:hover{
+    background-color: var(--bgColor);
+    border-radius: 20px;
+}
+input[type="number"]{
+    padding: 5px;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--rosa)
+}
+button{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+button:hover{
+    background: var(--rosa);
+}

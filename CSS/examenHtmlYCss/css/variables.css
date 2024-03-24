@@ -1,0 +1,15 @@
+:root{
+    --bgColor: #FFF7F1;
+    --navColor: #FFE4C9;
+    --infoColor: #BED1CF;
+    --rosa: #E78895;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: open;
+}

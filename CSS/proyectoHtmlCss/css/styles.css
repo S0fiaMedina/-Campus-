@@ -1,0 +1,345 @@
+@import url('variables.css');
+@import url('media.css');
+/*-------------- FIRST MOBILE --------------*/
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 10vh;
+}
+/*normalization*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0; 
+}
+/*general styles*/
+body{
+    overflow-y:scroll;
+    background-color: var(--bodyColor);
+}
+h1, .title{
+    color: var(--primaryColor);
+}
+h1{
+    font-size: 3em;
+}
+p, h1, h2,a{
+    width: fit-content;
+    font-family: var(--fontFamily);
+}
+p,h2,a{
+    color: var(--secondaryColor);
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    background-color: #352361;
+}
+.cont-p{
+    color: var(--pColor)
+}
+
+button{
+    margin:15px;
+    padding: 8px;
+    background-color: var(--primaryColor);
+    border: none;
+    color: var(--secondaryColor);
+    font-size: 1.3em;
+}
+/*img settings*/
+img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:contain;
+    
+}
+.food__img{
+    width: 100%;
+    height: 100%;
+}
+/*button effect*/
+button:hover,
+button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #EB3715;
+  transform: translateY(-0.25em);
+}
+
+/*nav*/
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+    z-index: 50;
+    background-color: var(--bodyColor);
+}
+.menu p{
+    font-size: 5vh;
+}
+.menu__icon{
+    height: 7vh;
+
+}
+.menu__icon img{
+    width:100%;
+    height:100%;
+}
+/*links */
+.menu__links, #menu-toggle{
+    display: none;
+    transform: translateY(-100%);
+    
+}
+/*menu drop*/
+#menu-toggle:checked ~ .menu__links {
+    position: absolute; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 70vh;
+    z-index: 100;
+    transform: translateY(0);
+    background-color: var(--movilColor);
+}
+.menu__links a{
+    font-size: 1.5em;
+}
+/*main*/
+main,footer{
+    position: relative;
+    top: 100px;
+}
+ section, footer{
+    width: 100vw;
+    height: fit-content;
+    display:flex;
+    padding: 5px;
+    margin: 10px 5px;
+    
+}
+.presentation{
+    margin-bottom: 50px;
+}
+/*smaller sections (footer - notice)*/
+footer, 
+/*grid distribution*/
+.grid{
+    width: 100%;
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 600px)); 
+    grid-template-rows: 30vh repeat(auto-fill, 40vh);
+    grid-gap: 15px;
+    justify-content: center;
+    
+} 
+/*presentation - about*/
+.grid div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div > .presentation__grid__text{
+    align-items: center;
+}
+/*burguer image settings*/
+.burguer-img{
+    width: 80%;
+}
+/*menu - services*/
+.food-menu__food, .services__product{
+    margin: 30px;
+}
+.food-menu__food, .notice__text{
+    background-color: var(--containerColor);
+}
+.food-menu > div, .services > div{
+    grid-template-rows: 20vh;
+    grid-auto-rows:repeat(auto-fill, 40vh);
+}
+.food-menu__food div{
+    height: calc(100% - 7em); /*avoid overflow*/
+}
+.services__product div{
+    height: calc(100% - 4em);
+}
+.food-menu__food >.corner__icon{
+    height: 10%;
+    width: 15%;
+    padding: 0;
+    background-color: var(--primaryColor);
+    align-self: self-end;
+}
+.services h2, .services p{
+    text-align: center;
+    margin: 0 30px;
+}
+/*special settings for services images*/
+.service-img{
+    max-width: 60%;
+}
+/*notice*/
+.notice{
+    align-items: center;
+    height: 40vh;
+}
+.notice > .grid{
+    display: flex;
+    align-items: center;
+}
+.notice__text{
+    padding: 20px;
+    height: auto;
+    width: 90vw;
+}
+/*footer*/
+footer > .grid{
+    justify-content: flex-start;
+    grid-auto-rows: auto;
+}
+.contact__menu:not(:last-child){
+    margin-left: 15vw;
+}
+.contact__menu a, .contact__menu h2{
+    margin: 5px;
+    align-self: flex-start;
+   
+}
+/*underline h2 footer*/
+.contact__menu h2::after {
+    content: "";
+    display: block;
+    width: 50%; /* Ajusta la longitud del quiebre */
+    border-bottom: 3px solid #EB3715; /* Define el estilo del quiebre */
+}
+.contact__menu h2:hover::after {
+    transition: width ease 0.5s;
+    width: 100%;
+}
+.contact__menu:last-child h2{
+    align-self: center;
+}
+.grid div > .contact__social-media{
+    height: 50%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    
+}
+.contact__social-media > div{
+    max-height: 50%;
+}
+/*efecto iconos*/
+
+/*-------- DESKTOP DESIGN--------*/
+@media (min-width: 960px) {
+    /*fuentes*/
+    .subtitle{
+        font-size: 2em;
+    }
+    p,h2,a{
+        font-size: 1.3em;
+    }
+    section{
+        height: 80vh;
+    }
+    button{
+
+        padding: 10px;
+    }
+    h1{
+        font-size: 6vw;
+    }
+    h2{
+        font-size: 2em;
+    }
+    .menu__icon{
+        display:none;
+    }
+    .menu__links{
+        font-size: 0.7em;
+        display: flex;
+        width: 45%;
+        transform: translateY(0);
+        justify-content: space-around;
+    }
+    /*main*/
+    .presentation{
+        margin-bottom: 0px;
+    }
+    .main-img{
+        width: 100%;
+        max-height: 150%
+    }
+    div > .presentation__grid__text{
+        font-size: 20px;
+        margin-bottom: 5%;
+        align-items: flex-start;
+        
+    }
+    .grid{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 45%));
+        grid-template-rows: none;
+        grid-auto-rows: 40vh;
+        align-content: center; 
+        width: 100%;
+    }
+    .grid div{
+        max-width: 100vw;
+    }
+    .about-us__text{
+        order: 1;
+    }
+    /*menu*/
+    .food-menu > div, .services > div{
+        grid-template-columns: repeat(3, max(30vw)); 
+        grid-template-rows: auto 50vh; 
+    }
+    .services > div{
+        grid-template-columns: repeat(3, max(calc(30vw)));
+    }
+
+    .food-menu__text, .services__grid__text{
+        grid-column: 1 / span 3;
+    }
+    /*notice*/
+    .notice{
+        height: 70vh;
+    }
+    .notice__text{
+        height: 48vh;
+        font-size: 1.5em;
+    }
+    
+    /*footer*/
+    #contact{
+        grid-template-rows: none;
+        grid-template-columns:none;
+        
+    }
+    footer > .grid{
+        grid-template-columns: repeat(4,1fr) ;
+        align-items: flex-start;
+        grid-auto-rows: auto;     
+    }
+    .contact__menu.contact__menu:not(:last-child){
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1200px){
+    footer > .grid{
+        grid-template-columns: repeat(4,minmax(20vw, 1fr)) ;    
+    }
+}

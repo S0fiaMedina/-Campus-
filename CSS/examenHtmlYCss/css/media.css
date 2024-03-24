@@ -1,0 +1,12 @@
+@media(max-width: 500px){
+    body .contenido{
+        width: 100px;
+    }
+}
+@media(max-width: 960px){
+    .info__producto__carrito,
+    .info__producto__carrito div{
+        flex-direction: column;
+    }
+}
+
