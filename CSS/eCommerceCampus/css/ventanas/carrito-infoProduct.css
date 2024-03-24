@@ -1,0 +1,90 @@
+@import url(../variables.css);
+
+/*----conf del dialog-----*/
+dialog{
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:100;  
+    height: 90vh;
+    width: 90vw;
+}
+.sectionDialog{
+    margin-top: 0px;
+}
+/*-----menu ---------*/
+.cart-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.detalles{
+    margin: auto;
+}
+#menuProductos{
+    overflow: hidden;
+}
+.cart-productos__price__header i{
+    font-size: 1.2rem;
+}
+/*------productos------*/
+.cart-productos{
+    height: 65vh;
+    overflow: scroll;
+}
+.cart-producto{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 20px;
+    
+}
+.cart-productos__total{
+    max-height: 20vh;
+}
+.cart-productos__price , .cart-productos__total{
+    display: flex;
+    flex-direction: column;
+}
+.cart-productos__price__header, .cart-productos__price__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.cart-productos__price__header i{
+    align-self: flex-start;
+}
+.cart-productos__price__footer{
+    justify-content: space-evenly;
+}
+.cart-productos__price__footer input{
+    max-width: 30%;
+}
+.cart-productos__price__footer p{
+    font-size: 0.7rem;
+}
+#addProducto{
+    align-self: flex-end;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    width: 6rem;
+}
+/*-------- dialog infoProduct ---------*/
+.sectionDialog, .game__dialog{
+    height: 85vh;
+}
+.game__dialog{
+    display:grid;
+    grid-template-rows: contain 1fr;
+}
+/*----media queries -----*/
+@media (min-width:968px){
+    dialog{
+        width: 40vw;
+    }
+    .game__info__text .p-dialog{
+        font-size: 1rem;
+    }
+}

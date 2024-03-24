@@ -1,0 +1,231 @@
+@import url(variables.css);
+/*test*/
+
+*{
+/*normalizado*/
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+h1,h2,p,a,button{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img,i{
+    max-width: 100%;
+    max-height: 100%;
+}
+button{
+    padding: 5px;
+    margin:7px;
+    width: 90%;
+}
+#menu-toggle{
+    display: none;
+}
+/*----- tamaño de letra----*/
+h1 { font-size: 1.5rem; }
+h2{ font-size: 1.3rem; }
+p,a { font-size: 1rem; }
+label { font-size: 0.6rem; }
+/*-------------------- first mobile -----------------*/
+/*------ header-------*/
+header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header__marca{
+    padding:10px;
+}
+.marca__icon{
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+.header__marca img{
+    border-radius: 10px;
+}
+nav{
+    display: flex;
+    border-radius: 15px;
+}
+nav div{ 
+    display: flex;
+    align-items: center;
+}
+nav div:not(:first-child){
+    display: none;
+}
+.fa-solid{
+    font-size: 30px;
+}
+/*----- menu drop ------*/
+/*menu drop*/
+#menu-toggle:checked ~ .menu{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    margin: auto;
+    top: 70px;
+    width: 80%;
+    height: 70vh;
+    z-index: 100;
+    transform: translateY(0);
+    border-radius: 15px;
+    background: radial-gradient(circle, rgba(0,0,0,1) 21%, rgba(22,22,22,1) 87%); 
+    
+}
+#menu-toggle:checked ~ .menu nav{
+    flex-direction: column;
+    min-width: 100px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+
+}
+#menu-toggle:checked ~ .menu nav div{
+    display: flex;
+    margin-top:  25px;
+    padding: 10px
+}
+/* -----main ----- */
+main{
+    position: relative;
+    padding:  0px 20px;
+    padding-top: 70px;
+    overflow: scroll;
+}
+section{
+    margin-top: 30px;
+    border-radius: 15px;
+}
+/*grid principal*/
+.game__img, .game__info{
+    border-radius: 15px;
+}
+.game__info{
+    padding-left: 10px;
+}
+.game{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 780px));
+    grid-auto-rows: 48vh;
+    grid-gap: 15px;
+    padding:10px;
+    border-radius: 15px;
+}
+
+.game__img{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: minmax(100px, 15%) 1fr;
+    grid-template-rows: repeat(4,22%);
+}
+
+.game__img__main{
+    grid-row: 1 / span 4;
+    grid-column: 2 / 3;
+}
+/*------ imagenes ------*/
+.game__img div{
+    border-radius: 15px;
+    display:flex;
+    align-items: center; /*hacer que al tocar, haya una imagen completa*/
+}
+.game__img div img{
+    border-radius: inherit;
+}
+/*texto*/
+
+/*------informacion textual-------*/
+.stars{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 60%;
+}
+.stars div i{
+    font-size: 1.5rem;
+}
+.game__info, .game__info__text, .game__info__get{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.game__info__text{
+    max-width: 90%;
+    height: 65%;
+}
+.game__info__price{
+    display:flex;
+    max-height: 30%;
+}
+.game__info__get{
+    width: 30%;
+}
+.game__info__get p{
+    align-self: center;
+}
+.old-price{
+    margin-left: 10px;
+    align-self: center;
+    width: fit-content;
+    text-decoration: line-through;
+}
+@media (min-width: 960px){
+    h1{ font-size: 2rem;}
+    h2{font-size: 2.3rem;}
+    p,a{font-size: 1.2rem;}
+    label{font-size: 0.75rem;}
+
+    .stars div i{
+        font-size: 2.5rem;
+    }
+
+    nav div:not(:first-child){
+        display: flex;
+        margin-left: 20px;
+    }
+    nav div{
+        flex: 0 0 20%;
+    }
+    nav{
+        max-width: 80vw;
+        overflow-x: scroll;
+    }
+    .game{
+        grid-template-columns: 55vw 1fr;
+        grid-auto-rows: 80vh;
+    }
+    #menu-toggle,label{
+        display: none;
+    }
+    img{
+        width: 100%;
+    }
+    .game__info__text{
+        justify-content: space-evenly;
+    }
+
+}
+@media(min-width: 1400px) {
+    h1 { font-size: 1.5rem; }
+    h2{ font-size: 3rem; }
+    p,a { font-size: 1.5rem; }
+    label { font-size: 0.6rem; }
+    button{ 
+        padding: 15px;}
+}

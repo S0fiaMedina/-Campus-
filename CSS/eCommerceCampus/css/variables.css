@@ -1,0 +1,17 @@
+:root{
+    /*estilos para las fuentes*/
+    font-size: 15px;
+
+    /*comportamiento scroll*/
+    html{
+        scroll-behavior: smooth;
+        scroll-padding: 10vh;
+    }
+    @media screen and (max-width: 768px) {
+        h1 { font-size: 1.5rem; }
+        h2{ font-size: 1.3rem; }
+        p,a { font-size: 1rem; }
+        label { font-size: 0.6rem; }
+    }
+    
+}
