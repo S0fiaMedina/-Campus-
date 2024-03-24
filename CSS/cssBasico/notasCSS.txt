@@ -1,0 +1,565 @@
+NOTAS:
+    - cuando se vaya a enlazar un archivo, NO PONER / ni ./ al inicio
+
+------------
+SELECTORES
+    - UNIVERSAL (*)
+        - todos los elementos
+    - POR ELEMENTO(nombre del elemento [h1, h2, nav, section..])
+        - selecciona un elemento.
+
+    - CLASES (.nombre de la clase >> class="nombre de la clase")
+        - edita el elemento con la clase.
+        - Se puede tener más de una clase (dejando un espacio)
+
+    - ID (#nombreId >>> id="nombreId")
+        - Edita el elemento con id
+        - Solo un elemento para un id (evita errores de JS)
+
+    - ATRIBUTOS PERSONALIZADOS -->([mensaje ="si"]>>> mensaje="si")
+        -edita un atributo PERSONALIZADO
+
+    - DESCENDIENTE --> (elemento/clase padre  elemento/clase hijo)
+        - modifica a un elemento  que esta contenido dentro de otro elemento, ej:
+            - h2 p --> modifica solo a los p contenidos dentro h2
+    
+    - PSEUDO-CLASES --> (elemento:pseudoclase)
+        - modifica la pseudoclase de un elemento
+
+    - POR ELEMENTO ESPECIFICO:
+        - FIRST-CHILD: El primero de su tipo en el contenedor padre;
+        - LAST-CHILD:  El ultimo de su tipo en el contenedor padre;
+        - NTH-CHILD(N):  El elemento en la posicion N  de su tipo en el contenedor padre;
+    
+
+PROPIEDADES PRINCIPALES
+    - color : cambia el color del elemento
+    SINTAXIS DEGRADADADO
+    - selector {
+    background: linear-gradient([dirección], [color-stop1], [color-stop2], ...);
+}
+
+
+--------------------------------------------------
+ESPECIFIDAD
+Cambiar estilo sin que este sea afectado despues por otros
+--------------------------------------------------
+1. POR CASCADA - DOS ELEMENTOS DEL MISMO TIPO
+    - si hay estilos del mismo tipo o nivel de jerarquia que entran en conflictos, CSS generalmente escoge el ultimo
+
+2. POR JERARQUIA(orden de importancia)
+    - para diferentes tipos. Anula la regla de CASCADA
+    - Las propiedades del mayor tipo, anulan las siguientes
+    - CLASE >> ID >> TIPO
+
+        1 - !important --> propiedad:valor !important 
+        2 - estilos en linea --> atributo style="" en html
+        3 - Identificadores
+        4 - clases - pseudo-clases -atributos
+        5 - pseudoelemento -elementos
+
+----------------------------------------
+METODOLOGIA:BEN (bloque- elemento --modificador)
+------------------------------------------
+__ >> para anidar bloques
+-- >> para modificaciones
+. >> para bloques
+
+-----------------------------------
+MEDIDAS
+-----------------------------------
+    - medidas fijas 
+        - PX:Pixeles
+        - CM: centimetros
+        - mm: milimetros
+    - medidas relativas
+        - REM:
+            - Similar a "em", pero se refiere al tamaño de la fuente del elemento raíz (es decir, del elemento <html>). Esto hace que las unidades "rem" sean más predecibles y fáciles de manejar en ciertos contextos.
+        - 1 em:16px(por default)
+            -  La unidad "em" se refiere al tamaño de la fuente del elemento padre. Un valor de 1em es igual al tamaño de la fuente del elemento actual.
+        - VHeight y VWidth (VH y VW):
+            - "1vh" es igual al 1% de la altura de la ventana, y "1vw" es igual al 1% del ancho de la ventana.
+        - %
+            - Los porcentajes son relativos al valor del padre. Por ejemplo, si un elemento tiene un ancho del 50% dentro de un contenedor, ocupará la mitad del ancho de ese contenedor.
+    COMPARACIÓN:
+        - rem:
+            Basado en el tamaño de fuente del elemento raíz.
+            Útil para tener un control predecible y consistente en todo el documento.
+
+        - em:
+            Basado en el tamaño de fuente del elemento padre más cercano.
+            Útil cuando deseas tamaños relativos al contexto del elemento padre.
+
+--------------------
+PROPIEDADES DE TEXTO
+----------------------
+- font size:    tamaño de la letra 
+-font-family:   Tipografia, tipografia generica(por si la primera no sirve)
+- line-height:  Interlineado ([divide el line-height por la mitad y pone el espacio arriba y abajo]);
+-font-weight:   Grosor de la letra
+- color:        Color del texto
+- box-shadow: modifica la sombra del texxto.
+    - sombreadoX sombreadoY tamañoDesenfoque  color
+- 
+
+IMPORTAR
+En la hoja de CSS...
+@import('URL')
+- font-size: tipografia importada, tipografia generica.
+
+----------------
+NORMALIZAR
+Cuando los estilos predeterminados del navegador entran en conflicto con el diseño deseado
+- Sirve ppara resetear los estilos 
+-------------------
+- normalize -> local
+    - PROPIEDADES APLICADOS
+        - *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        - img {max-width: 100%}
+
+
+---------------------------------------------
+TEORIA DE CAJAS
+---------------------------------------------
+- MODIFICAR
+    - display: inline/block
+
+- a los elementos en linea no se les puede aplicar ni height ni width ya que estos solo se adaptan al contenido
+
+SHORT HAND:
+Propiedades acortadas, que son un conjunto de sub-propiedades
+    - Top, right, bottom y left
+    - Top,bottom right,left
+
+
+PROPIEDADES DE CAJAS
+    - background -color: color de fondo
+    - opacity: 0 es transparente y 1 es opaco.
+    - padding: Distancia entre el texto y la caja (top, right, bottom, left)
+    - margin: distancia entre cajas.
+    - height: altura de la caja
+    - width: ancho de la caja.
+    -border-radius: medida del radio del borde (borde circular)
+    - border: tamaño, estilo, color -- define el estilo del borde
+    - box-shadow: modifica la sombra de la caja.
+        - sombreadoX sombreadoY tamañoDesenfoque tamañoBorde color
+
+BOX-MODEL:
++-------------------------------------+
+|              Margin (m)             |
+|                                     |
+|  +-------------------------------+  |
+|  |            Border (b)         |  |
+|  |                               |  |
+|  |  +-------------------------+  |  |
+|  |  |        Padding (p)      |  |  |
+|  |  |                         |  |  |
+|  |  | +---------------------+ |  |  |
+|  |  | |     Content (c)     | |  |  |
+|  |  | |                     | |  |  |
+|  |  | +---------------------+ |  |  |
+|  |  |                         |  |  |
+|  |  +-------------------------+  |  |
+|  |                               |  |
+|  +-------------------------------+  |
+|                                     |
++-------------------------------------+
+        
+
+NOTA:
+    - las medidas de la caja se pueden ver afectadas por el padding y el margin, a menos que se use box-sizing
+
+
+
+------------------------------------
+OUTLINE
+Eestablecer un contorno visual alrededor de un elemento, pero sin ocupar espacio 
+-----------------------------------
+
+----------------------------
+POSITION
+----------------------------
+FLUJO DEL DOCUMENTO:
+Cuando se carga una página web, los elementos HTML se colocan en el documento en un orden específico y siguiendo un flujo determinado. Este flujo normal sigue el orden en el que aparecen los elementos en el código HTML. Los elementos en línea (como texto y enlaces) se colocan uno al lado del otro en línea, mientras que los elementos de bloque (como párrafos y divisiones <div>) se colocan uno debajo del otro.
+    - STATIC (predeterminada)
+        - Sigue el flujo normal de la pagina. No se ve afectada por top, right y bottom.
+    - RELATIVE --> mover la caja SIN afectar a los demas, es libre :D y además no pierde su espacio :)
+        - "Me voy a mover, pero a partir de mi posicion"
+        - posiciona el elemento y adquiere top, left, right y bottom 
+            - permite desplazar un elemento con respecto a su posición normal (static),
+            - sigue conservando el mismo espacio 
+            - (Top left >>> bottom right), para que funcionen bottom y right, top y left no deben estar
+    - ABSOLUUTE -
+        - ""me voy a mover, pero dentro del contenedor"
+        -   Posiciona el elemento, pero le quita el espacio que el dom le tiene reservado, se sale del flujo del dom
+        -   Si se especifica una de estas propiedades, la caja toma como punto de ref el viewport o el contenedor más cercano, SI ESTA POSICIONADO 
+        - el ancho se ajusta al contenido
+        -   Si no se agrega top, left, right or buttom, la caja permanece donde estaba antes
+        - (Top left >>> bottom right), para que funcionen bottom y right, top y left no deben estar
+
+    - FIXED
+        - parecido a ABSOLUTE, pierde el espacio reservado. 
+        - La diferencia es el elemento permanece en la posicion que se le asigno
+
+----------------------------
+Z- INDEX
+----------------------------
+- Ordena los elementos en el eje Z
+- es como las capas en el dibujo
+- es buena practica aumentar los z-index de a una gran proporcion (p.e de 50 en 50)
+
+    - NOTA Z-INDEX Y POSICION
+        - LOS ELEMENTOS ESTATICOS NO TIENEN Z-INDEX
+        - Cuando una caja se posiciona, se adquiere un z-index mayor a los otros elementos
+        - lo anterior se basa en que caja se posiciona primero
+        - LO ANTERIOR NO APLICA PARA CAJAS PADRES QUE QUIERAN MOSTRARSE SOBRE LAS CAJAS HIJAS. A menos que el z-index del hijo este definido en -1 y del padre no este definido  (no muy recomendable)
+
+
+---------------------------
+display
+----------------------------
+- block
+- IN-LINE 
+- IN-LINE - BLOCK --> El elemento se comporta como in line, pero permite hacerle modificaciones
+- FLEX
+- GRID
+- INLINE - FLEX
+- INLINE -GRID
+
+----------------------------
+OVER-FLOW
+Cuando el contenido de un contenedor se desborda
+----------------------------
+
+PROPIEDADES:
+    - INHERIT (POR DEFECTO): Muestra el contenido que se sobresale
+    - AUTO: Crea un scroll que muestra todo el contenido dentro de una caja
+    - SCROLL: crea el scroll aun si el contenido no se desborda
+    - HIDDEN: Se oculta el desbordado.
+SHORT-HAND:
+    - overflow-x.
+    - overflow-y
+    - overflow: overflow-x, overflow-y 
+
+----------------------
+FLOAT --> posiciona la imagen respecto a su contenedor, acomodandose en el flujo
+(Al salir de su flujo anitguo, puede que en su nueva posicion, el contenedor padre no lo tome)
+----------------------
+
+-----------------------------
+PSEUDO-ELEMENTOS
+-----------------------------
+-NOTA:
+Aquellos elementos que usen "content", no forman parte del DOM.
+
+- ::FIRST-LINE --> modifica la primera linea (responsive) --> SOLO BLOCK
+- ::FIRST-LETTER --> modifica la primera letra --> SOLO BLOCK
+- input::PLACEHOLDER --> modifica lo que esta adentro de los inputs
+- ::SELECTION --> modifica como se ve cuando se selecciona un texto
+- ::AFTER y ::BEFORE
+    - son hijos del elemento al que se le van a aplicar.
+    - SE DEBE USAR CONTENT=""
+    - ::BEFORE --> crea un pseudoelemento que va "antes" del elemento padre
+    - ::AFTER --> crea un pseudoelemento que va "despues" del elemento padre
+
+-----------------------------
+PSEUDO-CLASES 
+-----------------------------
+- Escuchan un evento
+
+- :HOVER --> Cuando el cursor se pose sobre el elemento
+- :TRANSITION 
+    - cambia la velocidad de las transiciones entre un estado a un pseudo clase
+    - Hay que decir a que propiedades se le aplica la transicion y la velocidad (segundos)
+- :LINK --> Cambia el link que aun no se ha visitado, o de paginas que no existen
+- :VISITED --> Cambia el link que ya se ha visitado y que la pagina correspondiente haya cargado.
+- :ACTIVE --> cuando se presione sobre el elemento (teclas)
+- :FOCUS --> Cuando el elemento está en foco/seleccionado (para input)
+- :LANG() --> modifica como se va a tratar un texto dependiendo del idioma --> parametro
+
+-----------------------------
+OBJECT- FIT 
+-----------------------------
+VALORES:
+    - CONTAIN(por defecto) --> la imagen se ajusta para caber completamente dentro del contenedor sin distorsionar su proporción original
+    - COVER: La imagen se ajusta totalmente al contenido, recortándola las veces que sea necesario para que cubra completamente el contenedor. 
+    - NONE: Usa las propiedades por defecto
+    - SCALE-DOWN: (la resolucion mas chica)
+        - Si la imagen es más pequeña que el contenedor, se mostrará en su tamaño original sin realizar ninguna ampliación, similar a none.
+        - Si la imagen es más grande que el contenedor, se escalará hacia abajo para que quepa completamente dentro del contenedor, manteniendo su resolución original. Se seleccionará la mejor propiedad entre contain y none.
+
+
+-------------------------
+OBJECT POSITION
+-------------------------
+ -  VALORES
+    - Bottom, right, left bottom : corre la imagen hacia la dirección deseada (sin o con unidades)
+
+---------------------------
+CURSOR
+---------------------------
+Cambia la imagen del cursor cuando este se posa sobre un elemento.
+- Resize
+- progress
+- select...
+
+--------------------------
+COLORIZACION
+----------------------------
+- La forma en como se define colores
+    - Por nombre (cada navegador lo interpreta diferente)
+    - RGB (rojo, azul y verde) rgb()
+    - RGBAm(rojo, azul, verde y opacidad)
+    - por hexadeximal
+        - con 3 valores --> red, green blue 
+        - con 6 valores --> dos digitos representan a cada color 
+
+-------------------------
+RESPONSIVE DESIGN - (de desktop a celular)
+MOBILE FIRST - de movil a desktop 
+-------------------------
+    - <meta name="viewport">
+    - @media(max-width: n°pixeles)
+
+NOMENCLATURA NOMBRES DE ICONOS
+        - fa-solid/light/thin/duotone + fa-nombre_icono
+
+----------------------------
+FLEXBOX
+-----------------------------
+Establece como debe funcionar el contenedor respecto a su hijo area mainontal (X).
+        - Si flex-direction es column o column-reverse, el eje principal es vertical (Y).
+    - Serán flex-items todos los elementos que sean hijos directos de un contenedor de flex-box
+
+
++------------------+
+| Main Cross       |
+| ^                |
+| |                |
+| |                |
+| |                |
+| |                |
+| +---------------> Main Axis
+|                  |
+|                  |
++------------------+
+
+
+area mainl tamaño en el proceso
+
+PROPIEDADES
+	- las propiedades se aplican sobre el contenedor flex 
+	- Abrevia FLEX-FLOW: Flex direction -flex-flow;
+
+
+    - FLEX- START: Pone los elementos hacia el inicio del eje
+    - FLEX-END: pone los elementos hacia el final del eje
+    - CENTER: centra el contenido en el eje
+    - SPACE-AROUND: centra los items distribuuyendo el espacio, haciendo que cada caja tenga el mismo margen netre ellas
+    - SPACE-BETWEEN: simplemente buscar distribuir los elementos la mayor distancia posible entre ellos, incluso poniendo en la esquina
+    -BASELINE: Alinea los elementos y la linea de base de los elementos justo sobre la linea del eje (parecido a center)
+
+
+    ------------> MAIN AXES
+	- FLEX DIRECTION:
+	Como los elementos estan puestos dentro de la caja.
+		- column:  los elementos se comportan como una columna.
+		- row: Se comportan como una fila (uno al lado del otro)
+		- Row-reverse: el main axis va de derecha a izquierda
+		
+	- FLEX-WRAP
+	Si los items aparecen en una o varias lineas dentro del container
+		- nowrap : Todos en una misma linea.
+		- wrap: Aparecen en multiples lineas segun el ancho del contenedor
+		- wrap- reverse: los items se van para arriba segun el ancho.
+		
+	- JUSTIFY CONTENT (main axes): Centrar el contenido
+        - posee propiedades de flex-start, flex-end, center, space around, space between, baseline y evenly:
+        - EVENLY: Busca que todas las cajas tengan el mismo margen, entre y fuera de ellas
+		
+    
+------------> CROSS AXIS
+	- ALIGN ITEMS
+	Alinea los elementos a lo largo del eje cross (solo de una linea)
+		- posee propiedades de flex-start, flex-end, center, space around, space between y baseline
+	- ALIGN CONTENT
+		- Para modificar como cada linea esta puesta en el contenedor
+		- Solo funciona si flex-wrap: wrap esta presente
+		- tienen que haber multiples lineas de items
+         - posee propiedades de flex-start, flex-end, center, space around, space between, y strech(las lineas se estiraran de tal forma que se llene el espacio vacio, sin imoportar que quede desigual. O sea, establece justo las lineas dependiendo de las medidas dadas. No se ajusta)
+
+
+
+PROPIEDADES APLICADAS HACIA UN SOLO ITEM
+
+- ALIGN - SELF: Para aplicar propiedades de flex box a un unico elemento hijo de un contenedor padre.
+    - AUTO: se alinea con los demás items
+    - posee propiedades de flex-start, flex-end, center, space around, space between y baseline
+    
+- estas tres propiedades estan resumidas por el short hand: FLEX: flex-grow, flex-shrink, flex-basis (recibe al menos un parametro)
+    - FLEX-GROW:
+      - Define que tanto puede crecer una caja en relacion al espacio disponible
+        - La distribucion del espacio depende de cuantas cajas tengan esta propiedad y su factor
+        - la caja ocupará n partes del espacio dependiendo de lo especificado
+
+        - Un hack útil para calcular cuánto crecerán los flex-items sería:
+            x=EspacioSobrante/Sumgrow
+            - espacioSobrante = espacio de la pantalla - el espacio ocupado por la caja
+            - x = cuanto espacio crecen los flex grow
+            - sumGrow = numero total de flex-grows aplicados a todos los containers
+
+
+    - FLEX-BASIS:
+        - Define el tamaño incial de un item de flex-box. Define ancho si el main es X y altura si el main es Y
+            - AUTO: Se ajusta al contenido.
+            - especificado por el usuario
+
+    - FLEX- SHRINK:
+        - Especifica que tanto van a ceder las cajas cuando falte el espacio suficiente para que todas tengan su tamaño normal (rellena el espacio faltante.).
+            -  Un hack útil para calcular cuánto crecerán los flex-items sería:
+            x=EspacioFaltante/Sumshrink
+            - espacioFaltante = espacio total ocupado por las cajas - el espacio que nos da el navegador
+            - x = cuanto espacio ceden los flex grow
+            - sumShrink = numero total de flex-Shrinks aplicados a todos los containers
+
+    - ORDER: como el z-index, pero ene el eje en que apunta el main axis.
+        - es decir, el elemento que tenga más order estará adelante, mas arriba o más abajo. (depende del flex-direction)
+        - mientras que el elemento con el menor numero de order, aparecerá al inicio.
+
+
+------------------------------
+FLEX -GRID
+-------------------------------
+cuadrícula sobre la que se distribuyen los distintos elementos que componen la web. O sea, se contruye a parir de unas "grillas"
+Cuando se crea un grid, por defecto, los elementos estaran disposicionados en una sola columna. O sea, como un elementod e bloque.
+
+- GRID CONTAINER: Es el elemento contenedor al que se le aplica display: grid;. Este contenedor organiza a sus hijos directos en una cuadrícula.
+- GRID ITEM: Cada HIJO DIRECTO  forme parte del container.
+- GRID CELL: Cada celda individual en la cuadrícula se llama "Grid Cell". Es la intersección entre una fila y una columna.
+- GRID TRACK: Conjunto de filas o columnas en una cuadrícula. Las filas forman "Grid Row Tracks" y las columnas forman "Grid Column Tracks".
+    - COLUMN
+    - Row
+- GRID-AREA: Conjunto de celdas definidos por nosotros. junta “grid-column” y “grid-row” en una sola linea de codigo
+- GRID LINE: Es un conjunto de celdas definido por el usuario. shorthand  (grid-area: 1 / 1 / 3 / 4;)
+    - COLUMN LINES: íneas que definen las columnas en la cuadrícula. La primera línea siempre corresponde al inicio de la cuadrícula.
+    - ROW LINES: Líneas que definen las filas en la cuadrícula. La primera línea siempre corresponde al inicio de la cuadrícula.
+
+
+------- PROPIEDADES -------
+
+    - GRID-TEMPLATE (SHORT-HAND): grid-template-rows, grid-template-columns
+	    - GRID-TEMPLATE-ROWS (grid-container):Permite especificar la altura de cada fila individualmente o usar un valor 	repetitivo para aplicar un patrón a todas las filas.
+	    - GRID-TEMPLATE-COLUMNS (grid-container): Permite especificar el ancho de cada columna individualmente o usar un valor repetitivo para aplicar un patrón a todas las filas.
+
+- GRID-GAP: Espacio entre filas y columnas
+	- GRID- ROW-GAP: Espacio entre filas
+	-  GRID- COLUMN-GAP: Espacio entre columnas
+- repeat(cantidad, valor) para cantidad y tamaño de filas y columnas. el repeat, repite el sus valores n veces.
+
+ 
+1FR: reparte el espaico qe sobra en la columna/fila
+    - 
+    -GRID-COLUMN / ROW-:short hand para GRID-COLUMN/ROW - START -------- / GRID - COLUMN/ROW - END
+        - Sirve para fusionar celdas.
+        - Si se menciona lineas inexistentes, se crearan nuevas filas / columnas implicitas segund corresponda
+        - SPAN n : Ocupar 3 columnas o filas // u ocupar n columnas
+        
+        - inicio: Especifica en qué línea de columna comienza el elemento.
+        - fin: Especifica en qué línea de columna termina el elemento.
+            - Cabe resaltar que hacer mas grande un elemento, tendra como consecuencia que se "empujen" los otros restantes.
+
+
+-------------------
+GRID IMPLICITO Y EXPLICITO
+------------------
+
+GRID IMPLICITO
+se refiere a la forma en que la cuadrícula se comporta automáticamente cuando no se especifica explícitamente. Cuando defines un grid-template-rows o grid-template-columns, estás estableciendo explícitamente la estructura de la cuadrícula, pero si colocas elementos en la cuadrícula sin especificar filas o columnas específicas, la cuadrícula implícita entra en juego.
+
+PROPIEDADES PARA PROGRAMAR AL GRID IMPLICITO
+- GRID AUTO-FLOW: COLUMN;
+    - Hace que las nuevas celdas genereadas formen una columna.
+    - Por defecto cuano hay celdas nuevas, grid hace que se formen en una fila.
+    - DENSE: se indica al navegador que coloque los elementos de la cuadrícula automática de una manera más compacta, llenando los espacios vacíos que podrían haberse creado debido a la colocación irregular de elementos.
+- GRID-AUTO-ROWS: altura de las filas de la cuadrícula implícita.
+- GRID-AUTO-COLUMNS: ancho de las columnas de la cuadrícula implícita.   
+- GRID-AUTO-COLUMNS: ancho de las columnas de la cuadrícula implícita. 
+
+GRID DINAMICO
+
+
+- MIN-MAX(mino, maximo ): da un rango de valores con un limite infreioir y uno superoir
+- MIN-CONTENT: Lo minimo que puede medir es el tamaño de su contenido
+-MAX-CONTENT: la liena entera.
+- AUTO-FILL: Se usa junto con la función repeat() para generar llenar el espacio con celdas que cumplan ciertas condiciones
+- AUTO-FIT: escala los elementos
+
+ALINEACION
+
+ -   start: Los elementos se alinean hacia el inicio del eje principal de su celda.
+
+-    end: Los elementos se alinean hacia el final del eje principal de su celda.
+
+ -   center: Los elementos se alinean en el centro del eje principal de su celda.
+
+  -  stretch: Los elementos se estiran para llenar toda la longitud del eje principal de su celda (este es el valor por defecto).
+  
+  
+ - PLACE-ITEMS: Align-items, justify items
+	 - JUSTIFY-ITEMS: lo mismo que justify content pero para grid.
+	 - ALIGN -ITEMS- lo mismo que align item para flex pero en grid
+
+- PLACE-CONTENT: [align-content] [justify-content]
+	 - JUSTIFY-CONTENT: En vez de trabajar por los items en separado, trabaja con las columnas como si fueran todo un conjunto 
+	 - ALIGN-CONTENT: En vez de trabajar por los items en separado, trabaja con las filas como si fueran todo un conjunto
+	 - todo lo anteioir + las propiedades de flex
+
+APLICADO AL GRID ITEM
+>>> PLACE-SELF: (short-hand) align-self, justyfy self
+	- ALIGN-SELF: Ubica al elemento en el cross axis
+	- JUSTIFY-SELF
+
+---------------
+GRID AREAS
+----------------
+Usada para crear "bloques" de columnas y filas
+
+GRID-AREA:
+establece grid areas en base a los nombres que se den.
+    "nombreColumna nombreColumna nombreColumna" 
+    "nombreColumna nombreColumna nombreColumna"
+
+GRID-AREA (ELEMENTO): 
+Establece el nombre que el grid tomara para dividir el layout
+    - Ejemplo, en el estilizado de footer: 
+    - Grid-area: footer 
+
+---------------
+NOMBRES DE LINEAS
+-----------------
+Al ussar grid-template-rows...
+    [nombre de linea]
+    altura de la fila
+
+Lo mismo aplica con column
+
+
+-----------------------------------------------
+RESPONSIVE DESIGN
+-----------------------------------------------
+@media screen AND (min-width) AND (max-width) -> Para todas las pantallas Y define un minimo
+
+
+--------------------------------------------------
+VARIABLES
+--------------------------------------------------
+:root{
+    --color-rojo: #f40;
+}
+...
+background: var(--color-rojo)
+

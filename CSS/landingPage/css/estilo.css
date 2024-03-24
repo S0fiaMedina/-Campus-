@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{ /* ------------ SELECTORES UNIVERSALES --------------*/
+    padding:0;
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+/*------------ menu -----------------*/
+
+.navegador{ 
+    width: 100%;
+    height: 10vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .logo img{ 
+    margin-left: 20px;
+    width:100px;
+    filter:drop-shadow(2px 2px 2px blue);
+}
+.container .links a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    margin: 0 20px;
+    transition: 0.3s linear;
+    
+}
+
+.links a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    background-color: #0e3c68;
+    height: 3.5px;
+    transition: 0.3s linear;
+}
+
+.links a:hover::before,
+.links a:hover{
+    color: #09d4b9;
+    width: 100%;
+}
+
+.container .search  i{
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-right: 20px;
+}
+
+
+/*------------ contenido principal -----------------*/
+section{
+    width: 100%;
+    height: 90vh;
+}
+
+section .content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content .main-content{
+    color: white;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-content h1{
+    font-size: clamp(2rem,1rem + 5vw,4rem);
+}
+.main-content h2{
+    color: #0e3c68;
+    font-size: clamp(2rem,1rem + 5vw,3.5rem);
+}
+
+.main-content p{
+    margin-top: 10px;
+}
+
+.main-content .order{
+    display: flex;
+    margin: 20px 10px;
+    width: 100%;
+    justify-content: space-around;
+    min-height: 7vh;
+}
+
+.order h3{
+    font-size: 1.8rem;
+}
+
+.order button{
+    min-width: 50%;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #09d4b9 40%, #0e3c68);
+    color: white;
+    font-weight: 700;
+    padding: 0.2px;
+    font-size: clamp(0.6rem, 1rem 5vw);
+}
+
+ .order button:hover{
+    box-shadow: 0 0 30px aqua;
+    background: linear-gradient(to bottom right, #0e3c68, #09d4b9 40%);
+ }
+
+
+.content .image img{
+    max-width: 450px;
+    width: 100%;
+    margin-right: 100px;
+    transform: rotate(40deg) translate(900px); 
+    filter: drop-shadow(-10px -10px 200px aqua);
+    
+}
+.exit{
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor:pointer;
+}
+
+/*----------------- estilos responsive-------------------------*/
+
+/*------pc grandes*-----*/
+@media(min-width:884px){
+    .search{
+        display:none;
+    }
+    .content .image img{
+        min-width: 500px;
+    }
+
+}
+
+
+/*--- celulares ------*/
+@media(max-width:800px){
+    .links a::before{
+        background-color: #00ffb3;
+    }
+    .content{
+        display:flex;
+        width: 100%;
+        flex-direction: column-reverse;   
+    }
+    .main-content{
+        margin: 0 10px;
+    }
+    nav{
+        position: fixed;
+        backdrop-filter: blur(15px);
+        filter: drop-shadow(-10px -10px 20px aqua);
+        display: flex;
+        align-items: center;
+        top:0;
+        left:0;
+        right:0; 
+        height: 50%; 
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+        z-index: 2;
+    }
+    nav.active{
+        transform: translateX(0);
+    
+    }
+}
+
+@media(max-width:440px){
+    .image{
+        width: 300px;
+        margin-right: none;
+        
+    }
+    .img{
+        margin-top: 20%;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+    }
+    nav{
+        position: fixed;
+        backdrop-filter: blur(15px);
+        filter: drop-shadow(-10px -10px 20px aqua);
+        display: flex;
+        align-items: center;
+        top:0;
+        left:0;
+        right:0; 
+        height: 50%; 
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+        z-index: 2;
+    }
+    nav.active{
+        transform: translateX(0);
+    
+    }
+}
