@@ -1,0 +1,251 @@
+[
+    {
+        "id": 1,
+        "name": "Spider-Man",
+        "picture" : "img/marvel/spiderman.jpg",
+        "description": "Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities. Taught that with great power comes great responsibility, Spidey has vowed to use his powers to help people.",
+        "year": 1962,
+        "category": "marvel"
+    },
+    {   
+        "id": 2,
+        "name": "Iron Man",
+        "description": "Inventor Tony Stark applies his genius for high-tech solutions to problems as Iron Man, the armored Avenger.",
+        "picture": "img/marvel/ironman.jpg",
+        "year": 1963,
+        "category": "marvel"
+    },
+    {
+        "id": 3,
+        "name": "Captain America",
+        "description": "During World War II, Steve Rogers volunteered to receive the experimental Super-Soldier Serum. Enhanced to the pinnacle of human physical potential and armed with an unbreakable shield, he became Captain America.",
+        "picture": "img/marvel/captain.jpg",
+        "year": 1941,
+        "category": "marvel"
+    },
+    {
+        "id": 4,
+        "name": "Thor",
+        "description": "The son of Odin uses his mighty abilities as the God of Thunder to protect his home Asgard and planet Earth alike.",
+        "picture": "img/marvel/thor.jpg",
+        "year": 1962,
+        "category": "marvel"
+    },
+    {
+        "id": 5,
+        "name": "Hulk",
+        "description": "Dr. Bruce Banner lives a life caught between the soft-spoken scientist he's always been and the uncontrollable green monster powered by his rage.",
+        "picture": "img/marvel/hulk.jpg",
+        "year": 1962,
+        "category": "marvel"
+    },
+    {
+        "id": 6,
+        "name": "Black Widow",
+        "description": "Trained extensively in the art of espionage and outfitted with state-of-the-art equipment, Natasha Romanoff is the super spy known as Black Widow.",
+        "picture": "img/marvel/black-widow.jpg",
+        "year": 1964,
+        "category": "marvel"
+    },
+    {
+        "id": 7,
+        "name": "Hawkeye",
+        "description": "A master marksman and longtime friend of Black Widow, Clint Barton serves as the Avengers’ amazing archer.",
+        "picture": "img/marvel/hawkeye.jpg",
+        "year": 1964,
+        "category": "marvel"
+    },
+    {
+        "id": 8,
+        "name": "Black Panther",
+        "description": "T'Challa is the Black Panther, king of Wakanda, one of the most technologically advanced nations on Earth.",
+        "picture": "img/marvel/black-panther.jpg",
+        "year": 1966,
+        "category": "marvel"
+    },
+    {
+        "id": 9,
+        "name": "Doctor Strange",
+        "description": "Formerly a renowned surgeon, Doctor Stephen Strange now serves as the Sorcerer Supreme—Earth’s foremost protector against magical and mystical threats.",
+        "picture":  "img/marvel/dr-strange.jpg",
+        "year": 1963,
+        "category": "marvel"
+    },
+    {
+        "id": 10,
+        "name": "Scarlet Witch",
+        "description": "Wanda Maximoff is a native of the Eastern European country of Sokovia who grew up with her twin brother, Pietro.",
+        "picture": "img/marvel/Scarlet_Witch.jpg",
+        "year": 1964,
+        "category": "marvel"
+    },
+    {
+        "id": 11,
+        "name": "Vision",
+        "description": "The android called Vision defies physics and fights as an Avenger with the power of density manipulation and his flawless computer brain.",
+        "picture": "img/marvel/vision.jpg",
+        "year": 1968,
+        "category": "marvel"
+    },
+    {
+        "id": 12,
+        "name": "Ant-Man",
+        "description": "Scott Lang uses a stolen Pym Particle suit to shrink in size but increase in strength, becoming the astonishing Ant-Man!",
+        "picture": "img/marvel/ant-man.jpg",
+        "year": 1962,
+        "category": "marvel"
+    },
+    {
+        "id": 13,
+        "name": "Wasp",
+        "description": "Janet van Dyne gains the ability to shrink and fly, and she becomes the superheroine Wasp.",
+        "picture": "img/marvel/wasp.jpg",
+        "year": "1963",
+        "category": "marvel"
+    },
+
+    {
+        "id": 14,
+        "name": "Falcon",
+        "description": "Sam Wilson, a former Air Force pararescueman, uses a winged suit to become the superhero Falcon.",
+        "picture" : "img/marvel/falcon.jpg",
+        "year": "1969",
+        "category": "marvel"
+    },
+    {
+        "id": 15,
+        "name": "Winter Soldier",
+        "description": "Bucky Barnes, Steve Rogers' childhood friend, is brainwashed and becomes a highly skilled assassin known as the Winter Soldier.",
+        "picture": "img/marvel/winter-soldier.jpg",
+        "year": "2005",
+        "category": "marvel"
+    }, 
+    
+    {
+        "id": 16,
+        "name": "Superman",
+        "picture": "img/dc/superman.jpg",
+        "description": "Superman is the last survivor of the planet Krypton. He possesses superhuman strength, speed, and the ability to fly. Superman is dedicated to using his powers for the betterment of humanity.",
+        "year": 1938,
+        "category": "dc"
+    },
+    {
+        "id": 17,
+        "name": "Batman",
+        "picture": "img/dc/batman.jpg",
+        "description": "Batman, also known as Bruce Wayne, is a billionaire playboy who fights crime in Gotham City. Trained to physical and mental perfection, Batman relies on his intellect, detective skills, and gadgets to combat evil.",
+        "year": 1939,
+        "category": "dc"
+    },
+    {
+        "id": 18,
+        "name": "Wonder Woman",
+        "picture": "img/dc/wonder-woman.jpg",
+        "description": "Wonder Woman, also known as Diana Prince, is an Amazon warrior princess. Endowed with superhuman strength and agility, she fights for peace, love, and justice.",
+        "year": 1941,
+        "category": "dc"
+    },
+    {
+        "id": 19,
+        "name": "The Flash",
+        "picture": "img/dc/flash.jpg",
+        "description": "The Flash, also known as Barry Allen, is a forensic scientist who gained the ability to move at superhuman speeds after a freak accident. He uses his powers to protect Central City as a member of the Justice League.",
+        "year": 1940,
+        "category": "dc"
+    },
+    {
+        "id": 20,
+        "name": "Green Lantern",
+        "picture": "img/dc/green-latern.jpg",
+        "description": "Green Lantern, also known as Hal Jordan, is a member of the Green Lantern Corps, an intergalactic police force. He wields a power ring that allows him to create constructs out of green energy.",
+        "year": 1940,
+        "category": "dc"
+    },
+    {
+        "id": 21,
+        "name": "Aquaman",
+        "picture": "img/dc/aquaman.jpg",
+        "description": "Aquaman, also known as Arthur Curry, is the king of the underwater city of Atlantis. He possesses superhuman strength, the ability to breathe underwater, and can communicate with marine life.",
+        "year": 1941,
+        "category": "dc"
+    },
+    {
+        "id": 22,
+        "name": "Green Arrow",
+        "picture": "img/dc/green-arrow.jpg",
+        "description": "Green Arrow, also known as Oliver Queen, is a billionaire playboy who fights crime using his exceptional archery skills and a variety of trick arrows. He is a member of the Justice League.",
+        "year": 1941,
+        "category": "dc"
+    },
+    {
+        "id": 23,
+        "name": "Martian Manhunter",
+        "picture": "img/dc/manhunter.jpg",
+        "description": "Martian Manhunter, also known as J'onn J'onzz, is the last surviving member of the Martian race. He possesses a wide array of superhuman abilities including shapeshifting, telepathy, and super strength.",
+        "year": 1955,
+        "category": "dc"
+    },
+    {
+        "id": 24,
+        "name": "Cyborg",
+        "picture": "img/dc/cyborg.jpg",
+        "description": "Cyborg, also known as Victor Stone, is a former athlete who was severely injured in an accident and rebuilt using advanced technology. He is a member of the Justice League and possesses superhuman strength and cybernetic enhancements.",
+        "year": 1980,
+        "category": "dc"
+    },
+    {
+        "id": 25,
+        "name": "Shazam",
+        "picture": "img/dc/shazam.jpg",
+        "description": "Shazam, also known as Billy Batson, is a young boy who can transform into an adult superhero with the powers of six mythological figures by uttering the word 'Shazam!'",
+        "year": 1939,
+        "category": "dc"
+    },
+    {
+        "id": 26,
+        "name": "Hawkman",
+        "picture": "img/dc/hawkman.jpg",
+        "description": "Hawkman is a winged warrior from the planet Thanagar. He possesses enhanced strength, agility, and the ability to fly using artificial wings made of Nth metal.",
+        "year": 1940,
+        "category": "dc"
+    },
+    {
+        "id": 27,
+        "name": "Black Canary",
+        "picture": "img/dc/black-canary.jpg",
+        "description": "Black Canary, also known as Dinah Lance, is a martial artist with the ability to emit a powerful sonic scream known as the 'Canary Cry.' She is a skilled hand-to-hand combatant and a member of the Justice League.",
+        "year": 1947,
+        "category": "dc"
+    },
+    {
+        "id": 28,
+        "name": "The Atom",
+        "picture": "img/dc/atom.jpg",
+        "description": "The Atom, also known as Ray Palmer, is a physicist who can shrink to subatomic sizes while retaining his full strength. He is a member of the Justice League and uses his size-changing abilities to fight crime.",
+        "year": 1961,
+        "category": "dc"
+    },
+    {
+        "id": 29,
+        "name": "Zatanna",
+        "picture": "img/dc/zattana.jpg",
+        "description": "Zatanna is a magician and a member of the mystical Homo magi race. She possesses the ability to cast spells by speaking backwards and is skilled in both stage magic and true sorcery.",
+        "year": 1964,
+        "category": "dc"
+    },
+    {
+        "id": 30,
+        "name": "Nightwing",
+        "picture": "img/dc/nightwind.jpg",
+        "description": "Nightwing, also known as Dick Grayson, is the original Robin and former sidekick to Batman. He later adopts the identity of Nightwing and fights crime in Gotham City with his acrobatic skills and detective abilities.",
+        "year": 1963,
+        "category": "dc"
+    }
+]
+
+
+
+
+    
+
+

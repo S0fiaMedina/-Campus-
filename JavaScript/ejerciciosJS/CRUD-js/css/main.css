@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*-- variables --*/
+:root{
+    --dark1: #0000004d;
+    --dark2: #181c20;
+    --dark3: #212529;
+    --dark4: #2d3135;
+    --dark5: #424549;
+    --dark6: #404346;
+    --dark7: #9c9c9c;
+    --dark8: #dae0e7;
+    --dark9: #262a2e;
+    --red1: #902e31;
+}
+/*-- reseteo ---*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-- estilos generales ---*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh; /*evita desbordamiento*/
+    background:linear-gradient(var(--red1) 50%, var(--dark2) 50%);
+}
+
+/*--contenido principal---*/
+.container{
+    padding: 20px;
+    box-shadow: 3px 3px 20px var(--dark1);
+    background: var(--dark3);
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+/*--busqueda -- */
+.container header .filterEntries{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filterEntries .entries{
+    color: var(--dark8);
+}
+
+/*-- seleccion de numero de entradas ---*/
+.filterEntries .entries select, 
+.filterEntries .filter input,
+.popup header .closeBtn,
+.popup footer .submitBtn{
+    padding: 7px 10px;
+    color: var(--dark8);
+    background: var(--dark4);
+    border: 1px solid var(--dark6);
+    border-radius: 5px;
+    outline:none;
+    transition: .3s;
+    cursor: pointer;
+
+}
+.filterEntries .entries select{
+    padding: 5px 10px;
+}
+/*--- barra de busqueda ---*/
+.filterEntries .filter{
+    display: flex;
+    align-items: center;
+}
+
+.filter label{
+    color: var(--dark8);
+    margin-right: 5px;
+}
+
+.filter input:focus{
+    border-color: var(--dark7);
+}
+
+/*agregar nuevo miembro --> boton */
+.container header .addMemberBtn{
+    margin-bottom: 15px;
+}
+
+header .addMemberBtn button{
+    padding: 9px 14px;
+    color: var(--dark8);
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: auto;
+    outline: none;
+    border: 1px solid var(--dark6);
+    background: var(--dark4);
+    border-radius: 5px;
+}
+
+.addMemberBtn button:hover{
+    background: var(--dark5);
+}
+
+/*--- estilos de la tabla ---*/
+.container table{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table .heading{
+    background: var(--dark5);
+    background: transparent;
+    color : var(--dark8);
+}
+
+table .heading th:hover{
+    background: var(--dark4);
+    transition: .3s;
+}
+table tr th, table tr td {
+    padding: 4px 15px;
+    color: var(--dark8)
+}
+
+table tr th{
+    padding: 12px 15px;
+}
+/*- cuerpod de la tabla -*/
+/* alinea la imagen y la posicion */
+table tr td:nth-child(1), table tr td:nth-child(2){
+    text-align: center;
+}
+
+table tr:hover{
+    cursor: pointer;
+    background: var(--dark9);
+}
+table tr td{
+    border-bottom: 1px solid var(--dark6);
+}
+
+table tbody tr:first-child td{
+    border-top: 1px solid var(--dark6);
+}
+
+/*intercalado de estilos*/
+table tbody tr:nth-child(odd){
+    background:var(--dark9);
+}
+
+/*resalta el nombre*/
+table tbody tr:nth-child(odd) > td:nth-child(3){
+    background: var(--dark4);
+}
+table tr td{
+    font-size: 15px;
+}
+
+table td button{
+    margin: 0 3px;
+    padding: 5px;
+    width: 35px;
+    background: var(--dark5);
+    color: var(--dark8);
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: auto; /*reacciona de manera predeterminada a los eventos*/
+    outline: none;
+    border: 1px solid var(--dark7);
+}
+
+/*--- foooter ---*/
+.container footer{
+    margin-top: 25px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container footer span{
+    color: var(--dark8);
+}
+
+/*botones para mostrar info antigua*/
+footer .pagination{
+    display: flex;
+}
+footer .pagination button{
+    width: 40px;
+    margin: 0;
+    padding:  5px 0;
+    color: var(--dark8);
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: auto;
+    outline:none;
+    border: 1px solid var(--dark6);
+    border-left: none;
+}
+.pagination button:first-child{
+    width: 85px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left: 1px solid var(--dark6);
+    opacity: .6;
+    pointer-events: none; /*que no tome eventos del puntero, en este caso, el hover no se aplica a este*/
+}
+.pagination button.act:first-child{
+    opacity: 1;
+    pointer-events: auto;
+}
+.pagination button.act:last-child{
+    opacity: 1;
+    pointer-events: auto;
+}
+.pagination button:last-child{
+    width: 85px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: .6;
+    pointer-events: none;
+}
+
+.pagination button.active, .pagination button:hover{
+    background: var(--red1);
+}
+
+/*--- cuando no hay data en la tabla ---*/
+table tr .empty{
+    padding: 10px;
+    background: var(--dark5);
+    text-align: center;
+}
+
+/*--- popup form ---*/
+
+/*contenedor prncipal*/
+.dark_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    visibility: hidden;
+}
+
+.popup{
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.3);
+    background: var(--dark6);
+    transition: .4s;
+    user-select: none;
+}
+/*header*/
+.popup header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--dark7);
+    padding: 10px 20px;
+}
+.popup header .closeBtn{
+    font-size: 30px;
+    font-weight: 300;
+    padding: 0 15px;
+}
+.popup header .closeBtn:hover, 
+.popup footer .submitBtn:hover{
+    border-color: var(--dark7);
+    transition: .3s;
+}
+
+/*footer*/
+.popup footer{
+    border-top: 1px solid var(--dark7);
+    padding: 12px 20px;
+    text-align: right;
+}
+
+/*form*/
+.popup form{
+    padding: 10px 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/*mostrar la imagen*/
+.popup .imgholder{
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    overflow: hidden;
+    position: relative;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+.popup .imgholder .upload{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(0,0,0,.3);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.imgholder:hover .upload{
+    display: flex;
+}
+.imgholder .upload input{
+    display: none;
+}
+.imgholder .upload i{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 300;
+}
+.imgholder .img{
+    width: 100%;
+    height: 100%;
+}
+
+/*estilos del formulario*/
+form .inputFieldContainer .nameField ,
+form .inputFieldContainer .ageCityField ,
+form .inputFieldContainer .postSalary {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+form .inputFieldContainer .nameField input,
+form .inputFieldContainer .ageCityField input,
+form .inputFieldContainer .postSalary input{
+    width: 200px;
+}
+
+.inputFieldContainer .form_control{
+    margin: 10px 0;
+}
+
+.inputFieldContainer .form_control label{
+    display: block;
+    color: var(--dark8);
+    margin-bottom: 5px;
+}
+
+.form_control input{
+    padding: 5px;
+    border: 1px solid var(--dark6);
+    color: var(--dark8);
+    background: var(--dark4);
+    border-radius: 5px;
+    outline: none;
+    transition: .3s;
+    width: 100%;
+}
+
+.form_control input:focus,
+.form_control input:valid{
+    border-color: var(--dark7);
+}
+
+input::-webkit-inner-spin-button, /*esto no es estandar, pero estaba en el video xd*/
+input::-webkit-inner-spin-button{
+    display: none;
+}
+
+.active{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}

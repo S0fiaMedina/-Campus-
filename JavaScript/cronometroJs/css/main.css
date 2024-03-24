@@ -1,0 +1,49 @@
+/*variables*/
+/*reseteo*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.time-container{
+    border: 1px solid black;
+    width: 35rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.time__text{
+    font-size: 5rem;
+}
+.time__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+button{
+    border: 0;
+    font-size: 2.5rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 576px){
+    .time-container{
+        max-width: 90%;
+    }
+
+}

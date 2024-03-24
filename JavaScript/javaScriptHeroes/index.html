@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes</title>
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+
+        <h1>Superheroes database</h1>
+
+        
+            <label for="heroes-filter">Choose a list of superheroes</label>
+            <select  id="heroes-filter" form="filter">
+                <option value="all">All</option>
+                <option value="dc" data-category="dc">DC</option>
+                <option value="marvel" data-category="marvel">Marvel</option>
+            </select>
+            <input type="text" id="heroes-filter-name"></input>
+            <button ><i class="bi bi-search"></i></button>
+        
+    </header>
+
+    <main>
+
+        <div class="category-header" id="dc-header">
+            <img class="img-brand" src="img/dc/dc-logo.png" height="50" width:="50" alt="">
+            <h2 class="category-title">DC heroes</h2>
+        </div>
+        <div class="heroes-list" id="dc-list"></div>
+
+        <div class="category-header" id="marvel-header">
+            <img class="img-brand" src="img/marvel/marvel-logo.png" height="50" width:="50" alt="">
+            <h2 class="category-title">Marvel heroes</h2>
+        </div>
+
+        <div class="heroes-list marvel" id="marvel-list"></div> 
+
+
+    </main>
+    <dialog>
+        
+    </dialog>
+
+</body>
+</html>
