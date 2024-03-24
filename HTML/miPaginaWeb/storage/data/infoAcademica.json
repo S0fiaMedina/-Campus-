@@ -1,0 +1,15 @@
+{
+    "primaria": "Colegio integrado Fe y alegria ",
+    "bachiller": "Colegio Aurelio Martinez Mutis",
+    "titulos":{
+        "tecnicos":{
+            "SENA": "Tecnico en programacion de software"
+        }
+    },
+    "cursos":{
+        "cisco": ["Python I"],
+        "platzi": ["Curso gratis de programacion basica"],
+        "hardvard": ["CS50"]
+    },
+    "conocimientos varios":["Python", "HTML", "Git", "Pseint", "Linux", "Json"]
+}
