@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Todoist</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+
+    <main>
+        <div>
+            <h2>New Task</h2>
+            <form id="add-task">
+                <input class="task__description" type="text" placeholder="Describe the new Task" name="taskDescription" required>
+                <label for="initial-date">Initial date</label>
+                <input class="task__date" type="date" id="initial-date" name="initialDate" required>
+                <label for="finish-date">Deadline</label>
+                <input class="task__date" type="date" id="finish-date" name="finishDate" required>
+                <input class="task__responsible" type="text" placeholder="@responsible" name="taskResponsible" required>
+                <label for="task__priority">Choose the level of priority</label>
+                <select id="task__priority" name="taskPriority" required>
+                    <option value="urgent">Urgent</option>
+                    <option value="critical">Critical</option>
+                    <option value="normal">Normal</option>
+                </select>
+                <input id="submitTask" type="submit" value="Add Task">
+            </form>
+        </div>
+        
+        <div>
+            <h2>Pending</h2>
+            <div id="pending-tasks"></div>
+        </div>
+
+        <div>
+            <h2>Done</h2>
+            <div  id="done-tasks"></div>
+        </div>
+
+        <div>
+            <h2>Failed</h2>
+            <div id="failed-tasks"></div>
+        </div>
+
+    </main>
+    
+
+</body>
+</html>

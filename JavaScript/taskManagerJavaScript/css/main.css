@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #026AA7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  
+    padding: 20px;
+}
+form{
+    max-width: 550px;
+}
+
+#pending-tasks,
+#done-tasks,
+#failed-tasks {
+    width: 30%;
+    min-width: 300px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#pending-tasks h2,
+#done-tasks h2,
+#failed-tasks h2 {
+    margin-top: 0;
+}
+
+.task {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.task h3 {
+    margin-top: 0;
+}
+
+.task .task__info-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task .task__info-date {
+    font-size: 0.8em;
+    color: #666;
+}
+/* Estilos generales para todos los inputs */
+input[type="text"],
+input[type="date"],
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Estilos específicos para el botón de envío */
+#submitTask {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitTask:hover {
+    background-color: #45a049;
+}
+
+/* Estilos específicos para los inputs de tipo fecha */
+input[type="date"] {
+    appearance: none; /* Oculta la flecha del input */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos específicos para los selects */
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    appearance: none; /* Oculta la flecha del select */
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z' fill='%23111111'/%3E%3C/svg%3E"); /* Utiliza una flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pending-tasks,
+    #done-tasks,
+    #failed-tasks {
+        max-width: 100%;
+    }
+}
