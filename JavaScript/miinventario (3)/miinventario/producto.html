@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- La siguiente línea de código. Permite vincular. Boostrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script defer src="js/bootstrap.bundle.js"></script>
+    <script type="module" defer src="app.js" ></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <nav-menu></nav-menu> <!-- !! componente de js-->
+    </header>
+    <main>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active mnuproducto" aria-current="page" data-verocultar='["#regProduct",["#lstProduct"]]' href="#">Crear Producto</a>
+                  <!-- data- muestra que producto ver (el pimero) y deja el resto oculto (resto de la matriz)-->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mnuproducto" data-verocultar='["#lstProduct",["#regProduct"]]' href="#">Listar Producto</a>
+                </li>
+              </ul>
+        </div>
+        <section>
+            <div class="container" id="regProduct" style="display:none;">
+                <reg-product></reg-product> <!-- !! componente de js-->
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>

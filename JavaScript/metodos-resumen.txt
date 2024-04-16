@@ -1,0 +1,203 @@
+============================================
+       			Metodos de strings    
+============================================
+
+
+----------------------
+ Acceso a Caracteres:       
+----------------------
+	- charAt(index): Retorna el carácter en la posición especificada.
+	- charCodeAt(index): Retorna el valor Unicode del carácter en la posición especificada.
+	- codePointAt(index): Retorna el punto de código del carácter en la posición especificada.
+
+
+----------------------
+Búsqueda y Comparación:       
+----------------------
+	- indexOf(searchValue, startIndex): Retorna la primera posición de una cadena dentro de otra.
+	- lastIndexOf(searchValue, startIndex): Retorna la última posición de una cadena dentro de otra.
+	- includes(searchValue): Determina si una cadena contiene otra.
+	- startsWith(searchValue): Determina si una cadena comienza con otra.
+	- endsWith(searchValue): Determina si una cadena termina con otra.
+	- localeCompare(compareString): Compara dos cadenas considerando la localización.
+
+
+----------------------
+Extracción y Subcadena:       
+----------------------
+	- slice(startIndex, endIndex): Extrae una parte de una cadena.
+	- substring(startIndex, endIndex): Extrae una parte de una cadena.
+	- substr(startIndex, length): Extrae una parte de una cadena.
+	- substring(startIndex): Extrae una parte de una cadena.
+	- substr(startIndex): Extrae una parte de una cadena.
+	
+
+----------------------
+Transformación de Mayúsculas y Minúsculas:      
+----------------------
+ - toLowerCase(): Convierte una cadena a minúsculas.
+ - toUpperCase(): Convierte una cadena a mayúsculas.
+ 
+----------------------
+Espacios en Blanco:    
+----------------------
+   - trim(): Elimina espacios en blanco al principio y al final de una cadena.
+   - trimStart(): Elimina espacios en blanco al principio de una cadena.
+   - trimEnd(): Elimina espacios en blanco al final de una cadena.
+
+----------------------
+Concatenación y Separación:     
+----------------------
+	- concat(string1, string2, ...): Combina dos o más cadenas.
+	- split(separator, limit): Divide una cadena en un array de subcadenas.
+	- join(separator): Une los elementos de un array en una cadena.
+
+----------------------
+Reemplazo y Búsqueda con Expresiones Regulares:      
+----------------------
+	- match(regexp): Busca una coincidencia entre una cadena y una expresión regular.
+	 - replace(searchValue/regexp, newValue/function): Reemplaza parte de una cadena con otra.
+	 - search(regexp): Busca una coincidencia entre una cadena y una expresión regular.
+
+
+============================================
+       			Metodos de listas    
+============================================
+
+----------------------
+Acceso a Elementos:    
+----------------------
+   - arr[index]: Accede al elemento en la posición especificada.
+   - arr.length: Retorna la cantidad de elementos en la lista.
+   
+----------------------
+Modificación de Elementos:     
+----------------------
+	- arr.push(element1, ..., elementN): Añade uno o más elementos al final de la lista y retorna la nueva longitud.
+	- arr.pop(): Elimina el último elemento del array y lo retorna.
+	- arr.unshift(element1, ..., elementN): Añade uno o más elementos al inicio de la lista y retorna la nueva longitud.
+	- arr.shift(): Elimina el primer elemento del array y lo retorna.
+	- arr.splice(start, deleteCount, item1, ..., itemN): Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
+	- arr.concat(arr2): Retorna un nuevo array que combina el array original con otros arrays o valores.
+  - arr.slice(begin, end): Retorna una copia superficial de una porción del array en un nuevo array.
+	
+----------------------
+Iteración y Transformación:    
+----------------------
+	- arr.forEach(callback): Ejecuta una función una vez por cada elemento del array.
+	- arr.map(callback): Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada elemento del array.
+	- arr.filter(callback): Crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+	- arr.reduce(callback, initialValue): Aplica una función a un acumulador y a cada elemento del array para reducirlo a un único valor.
+	- arr.join(separator): Une todos los elementos del array en una cadena utilizando un separador.
+
+----------------------
+Búsqueda y Comparación:     
+----------------------
+	- arr.indexOf(searchElement, fromIndex): Retorna el primer índice de un elemento en el array, o -1 si no se encuentra.
+	- arr.lastIndexOf(searchElement, fromIndex): Retorna el último índice de un elemento en el array, o -1 si no se encuentra.
+	- arr.includes(searchElement, fromIndex): Determina si el array incluye un determinado elemento.
+	- arr.find(callback): Retorna el primer elemento del array que cumple con la condición proporcionada por la función de prueba.
+  - arr.findIndex(callback): Retorna el índice del primer elemento del array que cumple con la condición proporcionada por la función de prueba.
+	
+----------------------
+Ordenamiento y Reversión:   
+----------------------
+   - arr.sort(compareFunction): Ordena los elementos del array localmente y devuelve el array ordenado.
+   - arr.reverse(): Invierte el orden de los elementos del array.
+   - arr.some(callback): Verifica si al menos un elemento del array cumple con la condición dada por la función de prueba.
+   - arr.every(callback): Verifica si todos los elementos del array cumplen con la condición dada por la función de prueba.
+   
+----------------------
+Iteración con Indices:  
+----------------------
+	- arr.keys(): Retorna un nuevo objeto Array Iterator que contiene las claves para cada índice en el array.
+	- arr.entries(): Retorna un nuevo objeto Array Iterator que contiene los pares clave/valor para cada índice en el array.
+	- arr.values(): Retorna un nuevo objeto Array Iterator que contiene los valores para cada índice en el array.
+	
+
+
+
+########################################################################
+########################################################################
+
+
+MANIPULACION DEL DOM CON JS	
+
+
+===================================
+Manipulación de Atributos de Elementos HTML con JavaScript: 
+==================================
+
+
+---------------------------------
+Obtener atributos      
+---------------------------------
+   - element.getAttribute(name): Obtiene el valor de un atributo específico.
+   - element.hasAttribute(name): Verifica si un elemento tiene un atributo específico.
+   - element.attributes: Retorna una colección de todos los atributos de un elemento.
+
+---------------------------------
+Establecer Atributos:     
+---------------------------------
+   - element.setAttribute(name, value): Establece el valor de un atributo específico.
+   - element.removeAttribute(name): Elimina un atributo específico de un elemento.
+   - element.toggleAttribute(name): Alterna la presencia de un atributo en un elemento.
+
+---------------------------------
+Obtener y Establecer Atributos Especiales: 
+---------------------------------
+   - inputElement.value: Obtiene o establece el valor de un campo de entrada (input).
+   - textareaElement.value: Obtiene o establece el valor de un campo de texto de área (textarea).
+   - selectElement.value: Obtiene o establece el valor seleccionado de un elemento select.
+   - element.checked: Retorna o establece el estado de verificación de un elemento de entrada de tipo checkbox o radio.
+
+---------------------------------
+Acceso a Atributos Específicos:
+---------------------------------
+   - anchorElement.href: Obtiene o establece la URL de destino de un enlace.
+   - imgElement.src: Obtiene o establece la URL de la imagen.
+   - linkElement.hreflang: Obtiene o establece el idioma de destino de un enlace.
+   - inputElement.type: Obtiene o establece el tipo de campo de entrada (input).
+   
+   
+===================================
+Manipulación de Nodos y Elementos HTML con JavaScript:
+===================================
+
+---------------------------------
+Obtención de Nodos y Elementos      
+---------------------------------
+   - document.getElementById(id): Retorna el elemento HTML con el ID especificado.
+   - document.querySelector(selector): Retorna el primer elemento que coincide con el selector CSS especificado.
+   - document.querySelectorAll(selector): Este método devuelve una lista de todos los elementos que coinciden con el selector CSS especificado dentro del documento.
+   - parentNode.childNodes: Retorna una lista de los nodos secundarios de un nodo.
+   - parentNode.firstChild: Retorna el primer nodo hijo de un nodo.
+   - parentNode.lastChild: Retorna el último nodo hijo de un nodo.
+   - parentNode.nextSibling: Retorna el siguiente nodo hermano de un nodo.
+   - parentNode.previousSibling: Retorna el nodo hermano anterior de un nodo.
+
+---------------------------------
+Creación y Manipulación de Elementos:     
+---------------------------------
+   - document.createElement(tagName): Crea un nuevo elemento HTML con la etiqueta especificada.
+   - parentNode.appendChild(node): Agrega un nuevo nodo como hijo del nodo especificado.
+   - parentNode.removeChild(node): Elimina un nodo hijo del nodo especificado.
+   - parentNode.replaceChild(newNode, oldNode): Reemplaza un nodo hijo existente por un nuevo nodo.
+
+---------------------------------
+Obtención y Manipulación de Contenido:
+---------------------------------
+   - element.innerHTML: Obtiene o establece el contenido HTML interno de un elemento.
+   - element.textContent: Obtiene o establece el texto sin formato de un elemento.
+   - element.childNodes: Retorna una lista de los nodos secundarios de un elemento.
+
+---------------------------------
+Añadir, Remover y Alternar Clases      
+---------------------------------
+   - element.classList.add(className): Agrega una clase CSS al elemento.
+   - element.classList.remove(className): Elimina una clase CSS del elemento.
+   - element.classList.toggle(className): Alterna la presencia de una clase CSS en el elemento.	
+   - element.classList.replace(oldClass, newClass): Reemplaza una clase CSS existente con otra.
+
+
+  
